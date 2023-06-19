@@ -8,6 +8,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
+  background-color: #abdbe3;
+  height: 100%;
+  width: 100%;
 }
 
 code {

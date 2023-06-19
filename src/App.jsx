@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Section from 'components/Section/Section';
 import FeedbackOptions from 'components/FeedbackOptions/FeedbackOptions';
 import Statistics from 'components/Statistics/Statistics';
+import { Container, Message } from 'App.styled';
 
 export default class App extends Component {
   state = {
@@ -31,7 +32,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <div>
+      <Container>
         <Section title="Please leave your feedback">
           <FeedbackOptions
             options={this.state}
@@ -46,10 +47,10 @@ export default class App extends Component {
               percentage={this.getPercentage()}
             />
           ) : (
-            <p>No feedback given!</p>
+            <Message>No feedback given!</Message>
           )}
         </Section>
-      </div>
+      </Container>
     );
   }
 }
