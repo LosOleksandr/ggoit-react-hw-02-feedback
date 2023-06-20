@@ -5,7 +5,7 @@ import { StatsList, StatsItem, StatsText } from './Statistics.styled';
 export default function Statistics({ options, total, percentage }) {
   return (
     <StatsList>
-      {Object.entries(options).map(([key, value]) => (
+      {options.map(([key, value]) => (
         <StatsItem key={key}>
           <StatsText>{key}:</StatsText>
           <span>{value}</span>

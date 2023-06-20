@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Section from 'components/Section/Section';
-import FeedbackOptions from 'components/FeedbackOptions/FeedbackOptions';
-import Statistics from 'components/Statistics/Statistics';
+import Section from 'components/Section';
+import FeedbackOptions from 'components/FeedbackOptions';
+import Statistics from 'components/Statistics';
 import { Container, Message } from 'App.styled';
 
 export default class App extends Component {
@@ -35,14 +35,14 @@ export default class App extends Component {
       <Container>
         <Section title="Please leave your feedback">
           <FeedbackOptions
-            options={this.state}
+            options={Object.keys(this.state)}
             onLeaveFeedback={this.onLeaveFeedback}
           />
         </Section>
         <Section title="Statistics">
           {this.getTotalFeedbacks() ? (
             <Statistics
-              options={this.state}
+              options={Object.entries(this.state)}
               total={this.getTotalFeedbacks()}
               percentage={this.getPercentage()}
             />
